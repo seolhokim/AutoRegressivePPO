@@ -23,7 +23,6 @@ class AutoRegressivePPO(nn.Module):
                         nn.MaxPool2d(kernel_size=2,stride=2), # 16 * 16
                         nnFlatten(),
                         nn.Linear(256 * 16 * 16,1024)
-                        nn.ReLU()
                         )
         self.value = nn.Sequential(
                         nn.ReLU(),
